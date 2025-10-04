@@ -1,0 +1,91 @@
+.experience-section {
+  h2 {
+    font-size: 2.2rem;
+    position: relative;
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #1abc9c;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  /* Desktop timeline style */
+  .custom-timeline {
+    .timeline-marker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1abc9c, #67f0d4);
+      color: #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0 4px 12px #1abc9c;
+    }
+  }
+
+  .role-card {
+    border-radius: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  /* Mobile style ≤ 800px */
+  @media (max-width: 800px) {
+    .custom-timeline {
+      display: flex;
+      flex-direction: column;
+
+      .p-timeline-event {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        margin: 1rem 0;
+      }
+
+      .p-timeline-event-opposite {
+        display: none !important; // نخفي العمود الفاضي
+      }
+
+      .p-timeline-event-separator {
+        margin: 0 0 1rem 0 !important; // نخلي النقاط فوق الكارد
+      }
+
+      .timeline-marker {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+        background: #1abc9c;
+        box-shadow: none;
+      }
+    }
+
+    .role-card {
+      width: 100%;
+      box-shadow: none;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+    }
+  }
+}
+::ng-deep .p-timeline-event-opposite {
+  display: none !important;
+}
+::ng-deep .p-accordion-header-text,
+::ng-deep .p-accordion-toggle-icon {
+  color: #1abc9c;
+}
+
+.f-3 {
+  color: #333;
+}

@@ -1,0 +1,44 @@
+.about-section {
+  h2 {
+    font-size: 2.4rem;
+    position: relative;
+  }
+
+  .section-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .education-box {
+    border-left: 4px solid #1abc9c;
+    background: #f9fafc;
+  }
+
+  .badge.bg-gradient {
+    background: linear-gradient(135deg, #1abc9c, #00c6ff);
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    color: #444;
+  }
+
+  .info-card {
+    border-radius: 1rem;
+    font-size: 0.95rem;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+
+}
+.text-green {
+  color: #1abc9c;
+}
+.f-3 {
+  color: #333;
+}

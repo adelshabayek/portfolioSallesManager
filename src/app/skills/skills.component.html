@@ -1,0 +1,40 @@
+<div class="skills-section container py-5">
+  <h2 class="text-center mb-5 fw-bold f-3">Skills</h2>
+
+  <div class="row g-5 align-items-start">
+    <!-- Progress Bars -->
+    <div class="col-lg-6">
+      <h4 class="mb-3 section-title f-3">
+        <i class="pi pi-briefcase text-green"></i> Core Skills
+      </h4>
+      <div *ngFor="let skill of coreSkills" class="skill-item mb-4">
+        <div class="d-flex justify-content-between">
+          <span class="">{{skill.name}}</span>
+          <span class="text-muted">{{skill.level}}%</span>
+        </div>
+        <mat-progress-bar mode="determinate" [value]="skill.level"></mat-progress-bar>
+      </div>
+
+      <h4 class="mt-5 mb-3 section-title f-3">
+        <i class="pi pi-star text-green"></i> Personal Traits
+      </h4>
+      <div class="row g-2">
+        <div class="col-6 col-md-4" *ngFor="let trait of personalTraits">
+          <div class="trait-card shadow-sm">
+            <i class="pi pi-check-circle text-success me-2"></i> {{trait}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Radar Chart -->
+    <div class="col-lg-6">
+      <h4 class="mb-3 section-title f-3">
+        <i class="pi pi-chart-line text-info"></i> Skills Overview
+      </h4>
+      <div class="card chart-card">
+        <p-chart type="radar" [data]="chartData" [options]="chartOptions"></p-chart>
+      </div>
+    </div>
+  </div>
+</div>

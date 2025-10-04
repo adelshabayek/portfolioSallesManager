@@ -1,0 +1,152 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #121c3a; // deep dark base
+  color: #fff;
+}
+
+.hero canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+.line-h {
+  color: #333;
+}
+
+.line-h::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+     background: #1abc9c;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* KPI cards */
+.kpi-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kpi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.kpi-icon {
+  font-size: 2rem;
+  color: #1abc9c;
+  margin-bottom: 1rem;
+}
+
+/* Contact section */
+.contact-preview {
+  background: #121c3a;
+}
+
+/* Animations */
+.animate-fade {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+.animate-fade-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+.animate-fade-delay2 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: none; }
+  from { opacity: 0; transform: translateY(20px); }
+}
+
+/* Profile picture */
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-pic img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    h1 { font-size: 2rem; }
+    h3 { font-size: 1rem; }
+  }
+
+  .kpi-card {
+    padding: 1.5rem;
+  }
+
+  p-chart {
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: auto;
+    padding: 2rem 1rem;
+    h1 { font-size: 1.8rem; }
+    h3 { font-size: 0.95rem; }
+  }
+
+  .profile-pic img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+.sub-footer {
+  justify-content: center !important;
+}
+
+.skills-evo  {
+  
+  p{
+    line-height: 1.9;
+  }
+
+  ul {
+    line-height: 2;
+  }
+  
+}
+
+.btn-primary-2 {
+  background-color: #1abc9c;
+  color: #fff;
+}

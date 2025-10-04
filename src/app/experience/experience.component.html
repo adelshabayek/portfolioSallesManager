@@ -1,0 +1,25 @@
+<section class="container py-5 experience-section">
+  <h2 class="text-center mb-5 fw-bold f-3">Professional Experience</h2>
+  <p-timeline [value]="jobs" align="left" class="custom-timeline">
+    <ng-template pTemplate="marker" let-job>
+      <span class="timeline-marker"> <i class="pi pi-briefcase"></i> </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-job>
+      <p-card class="shadow-sm role-card">
+        <ng-template pTemplate="title">{{ job.title }}</ng-template>
+        <ng-template pTemplate="subtitle">
+          <strong>{{ job.company }}</strong> <br />
+          <span class="text-muted">{{ job.range }}</span>
+        </ng-template>
+        <p>{{ job.summary }}</p>
+        <p-accordion>
+          <p-accordionTab header="Key Responsibilities">
+            <ul class="mb-0">
+              <li *ngFor="let r of job.responsibilities">{{ r }}</li>
+            </ul>
+          </p-accordionTab>
+        </p-accordion>
+      </p-card>
+    </ng-template>
+  </p-timeline>
+</section>

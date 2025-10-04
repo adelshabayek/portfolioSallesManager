@@ -1,0 +1,70 @@
+<section class="about-section container py-5">
+  <div class="row g-5 align-items-start">
+
+    <!-- Profile & Summary -->
+    <div class="col-lg-8">
+      <div class="mb-4">
+        <h2 class="fw-bold mb-4 f-3">{{profile.name}}</h2>
+        <h5 class="text-muted">
+          <i class="pi pi-briefcase text-green"></i> {{profile.title}}
+        </h5>
+      </div>
+
+      <p class="lead text-justify">{{profile.summary}}</p>
+
+      <!-- Career Objective -->
+      <div class="mt-4 mb-4">
+        <h5 class="section-title f-3">
+          <i class="pi pi-bullseye text-green"></i> Career Objective
+        </h5>
+        <p class="fst-italic">{{profile.careerObjective}}</p>
+      </div>
+
+      <!-- Education -->
+      <div class="mt-4 mb-4">
+        <h5 class="section-title f-3">
+          <i class="pi pi-book text-green"></i> Education
+        </h5>
+        <div class="education-box p-3 shadow-sm rounded f-3">
+          <strong>{{profile.education.degree}}</strong>
+          <p class="mb-1">{{profile.education.university}}</p>
+          <small class="text-muted">{{profile.education.graduation}}</small>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="mt-4 ">
+        <h5 class="section-title f-3">
+          <i class="pi pi-language"></i> Languages
+        </h5>
+        <div class="d-flex flex-wrap gap-2">
+          <span *ngFor="let lang of profile.languages" class="badge bg-gradient">
+            {{lang}}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Personal Info Card -->
+    <div class="col-lg-4 ">
+      <p-card header="Personal Information" styleClass="shadow-sm info-card">
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2">
+            <i class="pi pi-flag text-green me-2"></i>
+            <strong>Nationality:</strong> {{profile.personal.nationality}}
+          </li>
+          <li class="mb-2">
+            <i class="pi pi-calendar text-green me-2"></i>
+            <strong>DOB:</strong> {{profile.personal.birthDate}}
+          </li>
+          <li class="mb-2">
+            <i class="pi pi-users text-green me-2"></i>
+            <strong>Status:</strong> {{profile.personal.maritalStatus}}
+          </li>
+        </ul>
+      </p-card>
+    </div>
+  </div>
+</section>

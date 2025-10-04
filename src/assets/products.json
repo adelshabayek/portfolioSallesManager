@@ -1,0 +1,20 @@
+[
+  {
+    "id":"p-basic-01",
+    "title":"Resume Review & ATS Optimization",
+    "price":49.00,
+    "currency":"USD",
+    "description":"Detailed CV audit and ATS-optimized rewrite (1 page).",
+    "image":"/assets/images/resume-review.jpg",
+    "tags":["resume","service"]
+  },
+  {
+    "id":"p-template-02",
+    "title":"Portfolio Website Template",
+    "price":129.00,
+    "currency":"USD",
+    "description":"Angular 17 portfolio template — fully responsive.",
+    "image":"/assets/images/portfolio-template.jpg",
+    "tags":["template","digital"]
+  }
+]

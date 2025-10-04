@@ -1,0 +1,42 @@
+.custom-footer {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: #fff;
+  font-size: 0.9rem;
+
+  h6 {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .social-link {
+    display: inline-block;
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+    color: #adb5bd;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #1abc9c;
+      transform: translateY(-3px);
+    }
+  }
+
+  hr {
+    border-color: rgba(255,255,255,0.2);
+  }
+
+  .small {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      text-align: center;
+    }
+    .social-link {
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.skills-section {
+  max-width: 1100px;
+
+  h2 {
+    font-size: 2.4rem;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #1abc9c;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  .section-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .skill-item {
+    mat-progress-bar {
+      height: 8px;
+      border-radius: 5px;
+      margin-top: 0.4rem;
+      overflow: hidden;
+      animation: growBar 1.5s ease forwards;
+    }
+  }
+
+  @keyframes growBar {
+    from {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    to {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  .trait-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background: linear-gradient(135deg, #1abc9c, #42e2c2);
+      color: #fff;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .chart-card {
+    border-radius: 1rem;
+    padding: 1rem;
+    background: #fff;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+    .col-lg-6 {
+      width: 100%;
+    }
+    h4 {
+      text-align: center;
+    }
+  }
+}
+
+.text-green {
+  color: #1abc9c;
+}
+::ng-deep .mdc-linear-progress__bar-inner  {
+  border-color: #1abc9c !important;
+}
+
+.f-3 {
+  color: #333;
+}

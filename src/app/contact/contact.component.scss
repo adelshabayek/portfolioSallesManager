@@ -1,0 +1,64 @@
+.contact-section {
+
+  h2 {
+    font-size: 2.2rem;
+    position: relative;
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #1abc9c;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  .contact-card, .form-card {
+    border-radius: 1rem;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .contact-card:hover, .form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: #1abc9c;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  button {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+    .col-lg-5, .col-lg-7 {
+      width: 100%;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.text-green {
+    color: #1abc9c;
+}
+.f-3 {
+    color: #333;
+}
+
