@@ -43,7 +43,7 @@
 .kpi-card {
   background: #fff;
   border-radius: 1rem;
-  padding: 2rem 1rem;
+  padding: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .kpi-card:hover {
@@ -102,9 +102,7 @@
     h3 { font-size: 1rem; }
   }
 
-  .kpi-card {
-    padding: 1.5rem;
-  }
+ 
 
   p-chart {
     height: 250px !important;

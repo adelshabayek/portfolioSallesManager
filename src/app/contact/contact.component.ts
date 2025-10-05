@@ -32,28 +32,28 @@ export class ContactComponent {
 
     try {
       const result = await emailjs.send(
-        'service_bj1cnhj', // ID الخدمة من EmailJS
-        'template_eq5r86s', // ID القالب
+        'service_bj1cnhj',     // Your Service ID
+        'template_tbva5hu',   // Your Template ID
         {
           from_name: this.contactForm.value.name,
           reply_to: this.contactForm.value.email,
           message: this.contactForm.value.message
         },
-        'Tp7IW-rS1VLc0fjmz' // Public Key من EmailJS
+        'cUWQ0oMcFfZg6e9OK'   // Your Public Key
       );
 
+      console.log('SUCCESS!', result.status, result.text);
       this.successMessage = '✅ Message sent successfully!';
       this.contactForm.reset();
       this.submitted = false;
     } catch (error) {
-      this.errorMessage = '❌ Failed to send message. Try again later.';
-      console.error(error);
+      console.error('FAILED...', error);
+      this.errorMessage = '❌ Failed to send message. Please try again later.';
     } finally {
       this.loading = false;
     }
   }
 
-  // بيانات الاتصال من السيرة الذاتية
   contactInfo = {
     phone: '+966 503898146',
     email1: 'esaleh1968@gmail.com',
