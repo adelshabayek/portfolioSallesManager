@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
    constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit() {
-    this.title.setTitle('About Me | Ehab ElSayed');
+    this.title.setTitle('Ehab El-Sayed');
     this.meta.updateTag({ name: 'description', content: 'Learn more about Ehab ElSayed, Sales Director & Business Development Manager with 20+ years experience.' });
   }
 
