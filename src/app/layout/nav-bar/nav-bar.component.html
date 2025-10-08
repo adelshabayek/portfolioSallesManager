@@ -1,36 +1,23 @@
-<nav class="navbar navbar-expand-lg  custom-navbar">
-  <div class="container">
-    <!-- Brand -->
-    <a class="navbar-brand fw-bold" routerLink="/">
-      <i class="pi pi-briefcase me-2"></i> Ehab ElSayed
-    </a>
+<nav class="modern-navbar">
+  <div class="navbar-container">
+    <!-- Logo (center on desktop, left on mobile) -->
+    <div class="logo">
+      <span class="logo-icon">E</span>
+      <span class="logo-text">SALEH</span>
+    </div>
 
-    <!-- Toggler -->
-    <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
-      aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+       <!-- Toggle button (mobile) -->
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <i class="pi" [ngClass]="isMenuOpen ? 'pi-times' : 'pi-bars'"></i>
     </button>
 
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto gap-2">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/experience" routerLinkActive="active-link">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/skills" routerLinkActive="active-link">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active-link">Contact</a>
-        </li>
-
-      </ul>
-    </div>
+    <!-- Navigation Links -->
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
+      <li><a routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+    </ul>
   </div>
 </nav>

@@ -1,4 +1,5 @@
 .experience-section {
+     padding-top: 130px !important;
   h2 {
     font-size: 2.2rem;
     position: relative;
@@ -9,7 +10,7 @@
     display: block;
     width: 70px;
     height: 3px;
-    background: #1abc9c;
+    background: #0d6efd;
     margin: 0.5rem auto 0;
     border-radius: 2px;
   }
@@ -20,12 +21,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #1abc9c, #67f0d4);
+      background: linear-gradient(135deg, #0d6efd, #67f0d4);
       color: #fff;
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      box-shadow: 0 4px 12px #1abc9c;
+      box-shadow: 0 4px 12px #0d6efd;
     }
   }
 
@@ -64,7 +65,7 @@
         height: 20px;
         font-size: 0.7rem;
         margin-bottom: 0.5rem;
-        background: #1abc9c;
+        background: #0d6efd;
         box-shadow: none;
       }
     }
@@ -83,7 +84,7 @@
 }
 ::ng-deep .p-accordion-header-text,
 ::ng-deep .p-accordion-toggle-icon {
-  color: #1abc9c;
+  color: #0d6efd;
 }
 
 .f-3 {

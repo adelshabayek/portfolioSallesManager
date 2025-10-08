@@ -1,83 +1,137 @@
-/* Navbar base */
-.custom-navbar {
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+.modern-navbar {
+  background: #121c3a;
+  border-radius: 50px;
+  margin: 20px auto;
+  padding: 0.6rem 1.5rem;
+  max-width: 1000px;
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
   transition: all 0.3s ease;
-  padding: 15px 0;
 
-  .navbar-brand {
-    color: #1abc9c;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 
-    &:hover {
-      color: #67e9cf;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+
+    .logo-icon {
+      background: #0d6efd;
+      color: #fff;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 0 10px rgba(26, 188, 156, 0.6);
     }
   }
 
-  .nav-link {
-    position: relative;
-    font-weight: 600;
-    color: #444 !important;
-    padding: 0.5rem 0.8rem;
-    transition: color 0.3s ease;
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    list-style: none;
+    margin: 0;
+    transition: all 0.4s ease;
 
-    /* Hover effect */
-    &:hover {
-      color: #1abc9c !important;
-    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
 
-    /* underline animation */
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0.5px;
-      width: 0%;
-      height: 3px;
-      background: linear-gradient(90deg, #1abc9c, #48bda5);
-      border-radius: 2px;
-      transition: width 0.3s ease;
-    }
+      &:hover {
+        color: #0d6efd;
+        background: rgba(255, 255, 255, 0.1);
+      }
 
-    &:hover::after {
-      width: 100%;
-    }
-
-    &.active-link {
-      color: #1abc9c !important;
-
-      &::after {
-        width: 100%;
+      &.active {
+        background: #0d6efd;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 0 10px rgba(26, 188, 156, 0.4);
       }
     }
   }
-}
 
-/* Responsive tweaks */
-@media (max-width: 992px) {
-  .custom-navbar {
-    .navbar-collapse {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 0.5rem;
-    }
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
 
-    .nav-link {
-      display: block;
-      padding: 0.7rem 0;
+    &:hover {
+      color: #0d6efd;
     }
   }
-}
 
-::ng-deep .navbar-toggler-icon {
-  color:#1abc9c !important;
-}
+  /* Mobile Style */
+  @media (max-width: 992px) {
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    margin: 0;
+    top: 0;
+    border: none;
 
-.navbar-toggler,
-.navbar-toggler:active,
-.navbar-toggler:focus {
-  border: 1px solid #1abc9c;
-  box-shadow: none;
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: rgba(18, 28, 58, 0.9);
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.4s ease;
+
+      &.active {
+        max-height: 400px;
+        opacity: 1;
+        padding: 1rem 0;
+      }
+
+      li {
+        width: 100%;
+        text-align: center;
+
+        a {
+          display: block;
+          padding: 0.8rem;
+          border-radius: 0;
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,7 @@
 .contact-section {
 
+       padding-top: 130px !important;
+
   h2 {
     font-size: 2.2rem;
     position: relative;
@@ -10,7 +12,7 @@
     display: block;
     width: 70px;
     height: 3px;
-    background: #1abc9c;
+    background: #0d6efd;
     margin: 0.5rem auto 0;
     border-radius: 2px;
   }
@@ -28,7 +30,7 @@
 
   ul li a {
     text-decoration: none;
-    color: #1abc9c;
+    color: #0d6efd;
     font-weight: 500;
 
     &:hover {
@@ -56,7 +58,7 @@
 }
 
 .text-green {
-    color: #1abc9c;
+    color: #0d6efd;
 }
 .f-3 {
     color: #333;
