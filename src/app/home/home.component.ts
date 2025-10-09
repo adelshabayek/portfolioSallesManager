@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
     this.resizeCanvas();
 
     // generate particles (neutrons)
-    for (let i = 0; i < 70; i++) {
+    for (let i = 0; i < 25; i++) {
       this.particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
