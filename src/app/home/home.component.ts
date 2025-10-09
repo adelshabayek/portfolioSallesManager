@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
     this.resizeCanvas();
 
     // generate particles (neutrons)
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 20; i++) {
       this.particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
         this.ctx.beginPath();
         this.ctx.moveTo(p.x, p.y);
         this.ctx.lineTo(this.mouse.x, this.mouse.y);
-        this.ctx.strokeStyle = `#0d6efd`;
+        this.ctx.strokeStyle = `#fff`;
         this.ctx.lineWidth = 0.8;
         this.ctx.stroke();
       }
@@ -127,7 +127,7 @@ export class HomeComponent implements OnInit {
           this.ctx.beginPath();
           this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
           this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-          this.ctx.strokeStyle = `#0d6efd`;
+          this.ctx.strokeStyle = `#fff`;
           this.ctx.lineWidth = 0.5;
           this.ctx.stroke();
         }
