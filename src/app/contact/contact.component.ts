@@ -57,7 +57,6 @@ export class ContactComponent {
   contactInfo = {
     phone: '+966 503898146',
     email1: 'esaleh1968@gmail.com',
-    email2: 'esaleh@acs.com.sa',
     linkedin: 'https://www.linkedin.com/in/ehab-elsayed-saleh-68035017/'
   };
 }

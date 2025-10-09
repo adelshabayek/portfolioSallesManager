@@ -1,7 +1,7 @@
 <div class="skills-section container py-5">
   <h2 class="text-center mb-5 fw-bold f-3">Skills Evaluation</h2>
 
-  <div class="row g-5 align-items-start">
+  <div class="row align-items-start">
     <!-- Progress Bars -->
     <div class="col-lg-6">
       <h4 class="mb-3 section-title f-3">
@@ -21,7 +21,7 @@
       <div class="row g-2">
         <div class="col-6 col-md-4" *ngFor="let trait of personalTraits">
           <div class="trait-card shadow-sm">
-            <i class="pi pi-check-circle text-success me-2"></i> {{trait}}
+            <i class="pi pi-check-circle text-primary me-2"></i> {{trait}}
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
     <!-- Radar Chart -->
     <div class="col-lg-6">
       <h4 class="mb-3 section-title f-3">
-        <i class="pi pi-chart-line text-info"></i> Skills Overview
+        <i class="pi pi-chart-line text-primary"></i> Skills Overview
       </h4>
       <div class="card chart-card">
         <p-chart type="radar" [data]="chartData" [options]="chartOptions"></p-chart>

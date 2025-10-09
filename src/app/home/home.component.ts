@@ -99,7 +99,7 @@ export class HomeComponent implements OnInit {
       // draw glowing neutron
       this.ctx.beginPath();
       this.ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-      this.ctx.fillStyle = '#0d6efd';
+      this.ctx.fillStyle = '#fff';
       this.ctx.fill();
 
       // connect to mouse (interactive aura)
@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
         this.ctx.beginPath();
         this.ctx.moveTo(p.x, p.y);
         this.ctx.lineTo(this.mouse.x, this.mouse.y);
-        this.ctx.strokeStyle = `rgba(0,255,255,${1 - distMouse / 150})`;
+        this.ctx.strokeStyle = `#0d6efd`;
         this.ctx.lineWidth = 0.8;
         this.ctx.stroke();
       }
@@ -127,7 +127,7 @@ export class HomeComponent implements OnInit {
           this.ctx.beginPath();
           this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
           this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-          this.ctx.strokeStyle = `rgba(0,255,180,${1 - dist / 100})`;
+          this.ctx.strokeStyle = `#0d6efd`;
           this.ctx.lineWidth = 0.5;
           this.ctx.stroke();
         }
