@@ -1,4 +1,12 @@
 <router-outlet></router-outlet>
 <app-nav-bar class="header"></app-nav-bar>
+<!-- Scroll-to-top Button -->
+<button
+  class="scroll-top-btn"
+  [class.show]="showScrollTop"
+  (click)="scrollToTop()"
+>
+  <i class="pi pi-arrow-up"></i>
+</button>
 
 <app-footer></app-footer>

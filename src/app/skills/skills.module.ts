@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
      ChartModule,
      MatProgressBarModule,
      HttpClientModule
-  ]
+  ],
+  exports: [SkillsComponent]
 })
 export class SkillsModule { }

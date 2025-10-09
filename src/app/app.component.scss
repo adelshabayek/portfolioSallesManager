@@ -1,20 +1,24 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 @include mat.core();
 
-$light-theme: mat.define-light-theme((
-  color: (
-    primary: mat.define-palette(mat.$indigo-palette),
-    accent: mat.define-palette(mat.$pink-palette),
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$indigo-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+    ),
   )
-));
+);
 
-$dark-theme: mat.define-dark-theme((
-  color: (
-    primary: mat.define-palette(mat.$blue-palette),
-    accent: mat.define-palette(mat.$pink-palette),
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$blue-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+    ),
   )
-));
+);
 
 @include mat.all-component-themes($light-theme);
 
@@ -48,3 +52,62 @@ body {
   width: 100%;
 }
 
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #0d6efd, #2a7fff);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+
+  i {
+    font-size: 1.3rem;
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #198754, #0d6efd);
+  }
+
+  /* ✅ Mobile & Tablet Responsive Adjustments */
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+
+    i {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}

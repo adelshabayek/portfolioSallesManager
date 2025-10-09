@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutRoutingModule,
     CardModule,
     HttpClientModule
-  ]
+  ],
+   exports: [AboutComponent],
 })
 export class AboutModule { }

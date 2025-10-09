@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
         this.ctx.beginPath();
         this.ctx.moveTo(p.x, p.y);
         this.ctx.lineTo(this.mouse.x, this.mouse.y);
-        this.ctx.strokeStyle = `#0d6efd`;
+        this.ctx.strokeStyle = `#66a4ff`;
         this.ctx.lineWidth = 0.8;
         this.ctx.stroke();
       }
@@ -113,7 +113,7 @@ export class HomeComponent implements OnInit {
           this.ctx.beginPath();
           this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
           this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-          this.ctx.strokeStyle = `#0d6efd`;
+          this.ctx.strokeStyle = `#66a4ff`;
           this.ctx.lineWidth = 0.5;
           this.ctx.stroke();
         }
@@ -123,4 +123,5 @@ export class HomeComponent implements OnInit {
     requestAnimationFrame(() => this.animate());
   }
   
+
 }

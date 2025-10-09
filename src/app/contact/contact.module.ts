@@ -29,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatProgressSpinnerModule,
     HttpClientModule
-  ]
+  ],
+    exports: [ContactComponent]
 })
 export class ContactModule { }

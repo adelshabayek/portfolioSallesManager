@@ -7,14 +7,19 @@ import { ChartModule } from 'primeng/chart';
 import { NgParticlesModule } from "ng-particles";
 import { HttpClientModule } from '@angular/common/http';
 
+import { AboutModule } from "../about/about.module";
+import { SkillsModule } from "../skills/skills.module";
+import { ExperienceModule } from "../experience/experience.module";
+import { ContactModule } from "../contact/contact.module";
+
 @NgModule({
   declarations: [HomeComponent],
-  imports: [SharedModule, HomeRoutingModule,
+  imports: [HomeRoutingModule,
     CardModule,
     ChartModule,
-    NgParticlesModule  ,
-    HttpClientModule
-  ]
+    NgParticlesModule,
+    HttpClientModule,
+    AboutModule, SkillsModule, ExperienceModule, ContactModule]
 })
 export class HomeModule {
 

@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AccordionModule,
     TimelineModule,
     HttpClientModule
-  ]
+  ],
+  exports: [ExperienceComponent]
 })
 export class ExperienceModule { }
