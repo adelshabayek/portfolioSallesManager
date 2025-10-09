@@ -1,0 +1,185 @@
+{
+  "home": {
+    "profile": {
+      "name": "Ehab ElSayed Saleh",
+      "title": "Territory Manager | Sales Manager | Senior Sales Accounts Manager for strategic customers | Business Development Manager",
+      "tagline": "Driving Growth • Building Teams • Delivering Strategic Sales Success",
+      "summary": "Proven track record of 20+ years in sales leadership and business development, with expertise in closing high-value deals, leading enterprise/government accounts, and exceeding KPIs across GCC markets.",
+      "contacts": {
+        "phone": "+966 503898146",
+        "email": "esaleh1968@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/ehab-elsayed-saleh-68035017/"
+      }
+    },
+    "kpis": [
+      { "label": "Years of Experience", "value": 20, "icon": "pi pi-briefcase" },
+      { "label": "Strategic Deals Closed", "value": "50+", "icon": "pi pi-chart-line" },
+      { "label": "Enterprise Accounts", "value": "100+", "icon": "pi pi-building" },
+      { "label": "Revenue Growth", "value": "3x", "icon": "pi pi-dollar" }
+    ],
+    "aiEvaluation": {
+      "summary": "AI evaluation shows a high match between Ehab’s skills and modern sales leadership competencies across strategy, negotiation and communication domains.",
+      "categories": [
+        {
+          "label": "Leadership",
+          "value": 95,
+          "description": "Leads cross-functional teams with vision and consistency."
+        },
+        {
+          "label": "Negotiation",
+          "value": 92,
+          "description": "Builds win-win agreements and manages complex stakeholders."
+        },
+        {
+          "label": "Strategy",
+          "value": 94,
+          "description": "Develops and executes growth plans aligned with organizational goals."
+        },
+        {
+          "label": "Communication",
+          "value": 89,
+          "description": "Articulates clear value propositions and motivates teams and clients."
+        },
+        {
+          "label": "Adaptability",
+          "value": 87,
+          "description": "Thrives in dynamic markets and adjusts strategies to emerging trends."
+        }
+      ]
+    }
+  },
+
+  "about": {
+    "profile": {
+      "name": "Ehab ElSayed Saleh",
+      "title": "Territory Manager / Sales Director / Business Development Manager",
+      "summary": "Over 20 years of proven success in sales leadership, business development, and account management across GCC enterprise and government clients. Skilled in driving strategic growth, leading high-performing teams, and building long-term customer relationships in IT and technology solutions.",
+      "careerObjective": "To leverage my extensive experience in sales and business development to contribute to organizational growth, deliver strategic value, and lead high-impact teams in achieving ambitious targets.",
+      "education": {
+        "degree": "Bachelor of Commerce in Accounting",
+        "university": "Helwan University, Cairo, Egypt",
+        "graduation": "May 1989 — Very Good with Honors"
+      },
+      "languages": ["Arabic (Native)", "English (Excellent)", "French (Basic)"],
+      "personal": {
+        "nationality": "Egyptian",
+        "birthDate": "9th March 1968",
+        "maritalStatus": "Married"
+      }
+    }
+  },
+
+  "skills": {
+    "coreSkills": [
+      { "name": "Sales Strategy", "level": 90 },
+      { "name": "Business Development", "level": 88 },
+      { "name": "Negotiation", "level": 85 },
+      { "name": "Leadership", "level": 95 },
+      { "name": "CRM Tools (Salesforce, HubSpot, MS CRM)", "level": 80 },
+      { "name": "IT Solutions Sales (Security, BI, Cloud, ERP)", "level": 78 }
+    ],
+    "personalTraits": [
+      "Self-Motivated",
+      "Organized",
+      "Flexible",
+      "Dedicated",
+      "Team Leading",
+      "Hard Worker",
+      "Communication Skills",
+      "Ambitious",
+      "Problem Solver",
+      "Open-Minded"
+    ]
+  },
+
+  "experience": {
+    "jobs": [
+      {
+        "title": "Territory Manager KSA",
+        "company": "OMNIX International Co.",
+        "range": "Jan 2021 – Present",
+        "summary": "Managing sales activities and strategic accounts across KSA. Building strong customer relationships and delivering tailored IT solutions.",
+        "responsibilities": [
+          "Develop and execute sales strategies for territory growth",
+          "Account and Customer Relationship Management",
+          "Lead deals negotiations and pricing plans",
+          "Prepare sales reports, tenders, proposals, and presentations",
+          "Handle strategic accounts such as Saudi Airlines, GACA, SAVOLA Group, Panda, Ministry of Hajj"
+        ]
+      },
+      {
+        "title": "Senior Sales Team Leader / Senior Sales Accounts Manager",
+        "company": "Arabic Computer Systems (ACS)",
+        "range": "2008 – Aug 2019",
+        "summary": "Led sales teams in Western Region, managing large enterprise and government accounts.",
+        "responsibilities": [
+          "Sales strategy and pipeline planning",
+          "Customer engagement and account management",
+          "Closed key deals with hospitals, airlines, and government entities",
+          "Prepared and delivered tenders, proposals, and sales reports",
+          "Mentored and guided junior sales team members"
+        ]
+      },
+      {
+        "title": "Tenders & Proposals Manager – Western Region",
+        "company": "Arabic Computer Systems (ACS)",
+        "range": "Jul 2005 – Dec 2007",
+        "summary": "Established and managed proposals/tenders section to support company-wide sales.",
+        "responsibilities": [
+          "Managed full tender and proposal preparation process",
+          "Coordinated with departments/vendors to meet RFP requirements",
+          "Calculated prices, prepared cost analysis, and ensured quality submissions"
+        ]
+      },
+      {
+        "title": "Tenders & Proposals Manager – Western Region",
+        "company": "Ebttikar (Al Faisaliah Group)",
+        "range": "Jan 2003 – Jun 2005",
+        "summary": "Built tenders department from scratch and managed all submissions for Western Region.",
+        "responsibilities": [
+          "Led preparation of proposals and tenders",
+          "Tracked submissions and maintained database of results",
+          "Ensured quality assurance and compliance with RFPs"
+        ]
+      },
+      {
+        "title": "Senior Sales Administrator – Western Region",
+        "company": "FAST (Al Faisaliah Group)",
+        "range": "1998 – Dec 2002",
+        "summary": "Oversaw tenders and proposals, sales reporting, and order processing for large-scale projects.",
+        "responsibilities": [
+          "Managed proposals lifecycle from RFP to submission",
+          "Prepared sales reports with SAP system",
+          "Supervised exhibitions, seminars, and client presentations"
+        ]
+      },
+      {
+        "title": "Senior Sales Administrator – Western Region",
+        "company": "Modern Electronics Est. (HP Division – Al Faisaliah Group)",
+        "range": "1990 – 1992",
+        "summary": "Handled proposals, tenders, and sales reporting for HP enterprise solutions.",
+        "responsibilities": [
+          "Prepared and managed tender documentation",
+          "Ensured proposals met customer and company standards",
+          "Generated sales reports for top management"
+        ]
+      },
+      {
+        "title": "IT Supervisor & Programmers Team Leader",
+        "company": "Diners Club Credit Card (Bin Mahfooz Group)",
+        "range": "1989 – 1990",
+        "summary": "Led IT team for financial systems and credit card operations.",
+        "responsibilities": [
+          "Supervised programmers team",
+          "Oversaw IT systems for financial transactions"
+        ]
+      }
+    ]
+  },
+
+  "contact": {
+    "phone": "+966 503898146",
+    "email1": "esaleh1968@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ehab-elsayed-saleh-68035017/"
+  }
+}

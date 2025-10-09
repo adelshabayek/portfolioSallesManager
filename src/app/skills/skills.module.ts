@@ -5,6 +5,7 @@ import { SkillsRoutingModule } from './skills-routing.module';
 import { SkillsComponent } from './skills.component';
 import { ChartModule } from 'primeng/chart';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     CommonModule,
     SkillsRoutingModule,
      ChartModule,
-     MatProgressBarModule
+     MatProgressBarModule,
+     HttpClientModule
   ]
 })
 export class SkillsModule { }

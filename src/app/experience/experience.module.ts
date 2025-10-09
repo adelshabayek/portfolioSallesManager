@@ -7,6 +7,7 @@ import { CardModule } from 'primeng/card';
 import { AccordionModule } from 'primeng/accordion';
 import { TimelineModule } from 'primeng/timeline';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TimelineModule } from 'primeng/timeline';
     ExperienceRoutingModule,
     CardModule,
     AccordionModule,
-    TimelineModule
+    TimelineModule,
+    HttpClientModule
   ]
 })
 export class ExperienceModule { }

@@ -65,6 +65,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
+    HttpClientModule
     
   ],
     bootstrap: [AppComponent],

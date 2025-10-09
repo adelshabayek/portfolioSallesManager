@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about.component';
 import { CardModule } from 'primeng/card';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CardModule } from 'primeng/card';
   imports: [
     CommonModule,
     AboutRoutingModule,
-    CardModule
+    CardModule,
+    HttpClientModule
   ]
 })
 export class AboutModule { }

@@ -1,4 +1,5 @@
 import { Component ,ElementRef,HostListener,OnInit } from '@angular/core';
+import {  ApiService} from '../core/services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -6,40 +7,25 @@ import { Component ,ElementRef,HostListener,OnInit } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  constructor(private el: ElementRef){}
-  profile = {
-    name: 'Ehab ElSayed Saleh',
-    title: 'Territory Manager | Sales Manager | Senior Sales Accounts Manager for strategic customers | Business Development Manager',
-
-    tagline: 'Driving Growth • Building Teams • Delivering Strategic Sales Success',
-    summary: `Proven track record of 20+ years in sales leadership and business development,
-              with expertise in closing high-value deals, leading enterprise/government accounts,
-              and exceeding KPIs across GCC markets.`,
-    contacts: {
-      phone: '+966 503898146',
-      email: 'esaleh1968@gmail.com',
-      linkedin: 'https://www.linkedin.com/in/ehab-elsayed-saleh-68035017/'
-    }
-  };
-
-  kpis = [
-    { label: 'Years of Experience', value: 20, icon: 'pi pi-briefcase' },
-    { label: 'Strategic Deals Closed', value: '50+', icon: 'pi pi-chart-line' },
-    { label: 'Enterprise Accounts', value: '100+', icon: 'pi pi-building' },
-    { label: 'Revenue Growth', value: '3x', icon: 'pi pi-dollar' }
-  ];
-
+   profile: any;
+  kpis: any[] = [];
   aiEvaluation: any;
 
+  constructor(private el: ElementRef, private apiService: ApiService) {}
+
   ngOnInit(): void {
-    // Simulated AI evaluation (from CV analysis)
+    this.apiService.getData().subscribe(data => {
+      this.profile = data.home.profile;
+      this.kpis = data.home.kpis;
+     // Adapt new AI structure
+    const ai = data.home.aiEvaluation;
     this.aiEvaluation = {
-      leadership: 95,
-      negotiation: 92,
-      strategy: 94,
-      communication: 89,
-      adaptability: 87
+      summary: ai.summary,
+      labels: ai.categories.map((c: any) => c.label),
+      values: ai.categories.map((c: any) => c.value),
+      details: ai.categories
     };
+  });
   }
 
    private ctx!: CanvasRenderingContext2D;
@@ -99,7 +85,7 @@ export class HomeComponent implements OnInit {
       // draw glowing neutron
       this.ctx.beginPath();
       this.ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-      this.ctx.fillStyle = '#0d6efd';
+      this.ctx.fillStyle = '#fff';
       this.ctx.fill();
 
       // connect to mouse (interactive aura)
@@ -110,7 +96,7 @@ export class HomeComponent implements OnInit {
         this.ctx.beginPath();
         this.ctx.moveTo(p.x, p.y);
         this.ctx.lineTo(this.mouse.x, this.mouse.y);
-        this.ctx.strokeStyle = `#fff`;
+        this.ctx.strokeStyle = `#0d6efd`;
         this.ctx.lineWidth = 0.8;
         this.ctx.stroke();
       }
@@ -127,7 +113,7 @@ export class HomeComponent implements OnInit {
           this.ctx.beginPath();
           this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
           this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-          this.ctx.strokeStyle = `#fff`;
+          this.ctx.strokeStyle = `#0d6efd`;
           this.ctx.lineWidth = 0.5;
           this.ctx.stroke();
         }

@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="hero d-flex align-items-center text-white text-center">
+<section class="hero d-flex align-items-center text-white text-center" *ngIf="profile; else loading">
   <canvas id="neutrons-bg"></canvas>
 
   <div class="container mb-3">
@@ -42,60 +42,45 @@
   </div>
 </section>
 
+<ng-template #loading>
+  <div class="text-center py-5">Loading...</div>
+</ng-template>
+
 <!-- AI Evaluation Section -->
 <section class="container py-5">
   <h2 class="text-center mb-5 fw-bold line-h">Skills Evaluation</h2>
   <div class="row align-items-center gy-4">
     <div class="col-12 col-md-6 skills-evo">
-      <p>{{ profile.summary }}</p>
+      <p>{{ aiEvaluation.summary }}</p>
+
       <ul class="list-unstyled">
-        <li>
-          <i class="pi pi-check-circle text-success"></i> Strategic Sales
-          Leadership
-        </li>
-        <li>
-          <i class="pi pi-check-circle text-success"></i> Business Development
-          Excellence
-        </li>
-        <li>
-          <i class="pi pi-check-circle text-success"></i> Negotiation & Deal
-          Closing
-        </li>
-        <li>
-          <i class="pi pi-check-circle text-success"></i> GCC Enterprise &
-          Government Expertise
+        <li *ngFor="let cat of aiEvaluation.details" >
+          <i class="pi pi-check-circle text-primary me-1"></i>
+          <strong>{{ cat.label }}</strong> — {{ cat.description }}
         </li>
       </ul>
+
     </div>
     <div class="col-12 col-md-6 text-center">
-      <p-chart type="radar" [data]="{
-          labels: [
-            'Leadership',
-            'Negotiation',
-            'Strategy',
-            'Communication',
-            'Adaptability'
-          ],
+      <p-chart type="radar"
+        [data]="{
+          labels: aiEvaluation.labels,
           datasets: [
             {
               label: 'AI Match (%)',
-              data: [
-                aiEvaluation.leadership,
-                aiEvaluation.negotiation,
-                aiEvaluation.strategy,
-                aiEvaluation.communication,
-                aiEvaluation.adaptability
-              ],
+              data: aiEvaluation.values,
               backgroundColor: 'rgba(54,162,235,0.3)',
               borderColor: '#0d6efd',
               pointBackgroundColor: '#0d6efd'
             }
           ]
-        }" [options]="{
+        }"
+        [options]="{
           responsive: true,
           maintainAspectRatio: false,
           scales: { r: { min: 0, max: 100 } }
-        }" style="height: 300px; max-width: 100%"></p-chart>
+        }"
+        style="height: 300px; max-width: 100%"></p-chart>
     </div>
   </div>
 </section>
