@@ -99,7 +99,7 @@ export class HomeComponent implements OnInit {
       // draw glowing neutron
       this.ctx.beginPath();
       this.ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-      this.ctx.fillStyle = '#fff';
+      this.ctx.fillStyle = '#0d6efd';
       this.ctx.fill();
 
       // connect to mouse (interactive aura)
