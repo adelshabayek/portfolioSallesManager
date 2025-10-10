@@ -1,5 +1,5 @@
 .modern-navbar {
-      background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 50px;
   margin: 20px auto;
   padding: 0.6rem 1.5rem;
@@ -8,8 +8,6 @@
   top: 20px;
   z-index: 1000;
   transition: all 0.3s ease;
-
- 
 
   .navbar-container {
     display: flex;
@@ -32,8 +30,8 @@
     .logo-icon {
       background: #0d6efd;
       color: #fff;
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       display: flex;
       align-items: center;
