@@ -7,12 +7,12 @@
   position: relative;
 
   // When Home is active
-  &.home-active {
-    background: transparent;
-    position: absolute;
-    top: 107%; // ✅ stick to bottom
-    width: 100%;
-  }
+  // &.home-active {
+  //   background: transparent;
+  //   position: absolute;
+  //   top: 107%; // ✅ stick to bottom
+  //   width: 100%;
+  // }
 
   // Responsive adjustments
   @media (max-width: 768px) {
@@ -60,7 +60,7 @@
       margin: 0 0.5rem;
     }
     .custom-footer {
-      border-top: 0 solid rgba(255, 255, 255, 0.2);
+     
       margin-bottom: 18px;
     }
   }

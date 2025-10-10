@@ -4,15 +4,16 @@ $text-light: #d0e0ff;
 
 .subhome {
   position: relative;
-  min-height: 130vh;
+  min-height: 100vh;
   width: 100%;
+padding-top: 130px !important;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
-  padding: 2rem;
+
 
   // 🎥 Background video
   .bg-video {
