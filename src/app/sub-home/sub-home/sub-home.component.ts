@@ -17,7 +17,7 @@ export class SubHomeComponent implements AfterViewInit, OnDestroy {
   canvasRef!: ElementRef<HTMLCanvasElement>;
   @ViewChild('bgVideo', { static: true })
   videoRef!: ElementRef<HTMLVideoElement>;
-
+  isVideoLoading = true;
   private ctx!: CanvasRenderingContext2D;
   private particles: any[] = [];
   private animationFrameId: any;
@@ -123,5 +123,10 @@ export class SubHomeComponent implements AfterViewInit, OnDestroy {
     }
 
     this.animationFrameId = requestAnimationFrame(() => this.animate());
+  }
+
+  onVideoLoaded() {
+    // Hide spinner when video is ready to play
+    this.isVideoLoading = false;
   }
 }

@@ -54,6 +54,43 @@ padding-top: 130px !important;
   //   }
   // }
 
+  .video-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: radial-gradient(circle at center, #00092a, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00f5ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite, glow 2s ease-in-out infinite alternate;
+  box-shadow: 0 0 20px #00f5ff;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00f5ff;
+  }
+  to {
+    box-shadow: 0 0 25px #5d00ff;
+  }
+}
+
+
   // 💎 Content
   .ai-content {
     position: relative;
