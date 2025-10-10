@@ -18,35 +18,15 @@
       { "label": "Revenue Growth", "value": "3x", "icon": "pi pi-dollar" }
     ],
     "aiEvaluation": {
-      "summary": "AI evaluation shows a high match between Ehab’s skills and modern sales leadership competencies across strategy, negotiation and communication domains.",
-      "categories": [
-        {
-          "label": "Leadership",
-          "value": 95,
-          "description": "Leads cross-functional teams with vision and consistency."
-        },
-        {
-          "label": "Negotiation",
-          "value": 92,
-          "description": "Builds win-win agreements and manages complex stakeholders."
-        },
-        {
-          "label": "Strategy",
-          "value": 94,
-          "description": "Develops and executes growth plans aligned with organizational goals."
-        },
-        {
-          "label": "Communication",
-          "value": 89,
-          "description": "Articulates clear value propositions and motivates teams and clients."
-        },
-        {
-          "label": "Adaptability",
-          "value": 87,
-          "description": "Thrives in dynamic markets and adjusts strategies to emerging trends."
-        }
-      ]
-    }
+    "summary": "AI evaluation shows a high match between Ehab’s skills...",
+    "categories": [
+      { "label": "Leadership", "value": 95, "description": "..." },
+      { "label": "Negotiation", "value": 92, "description": "..." },
+      { "label": "Strategy", "value": 94, "description": "..." },
+      { "label": "Communication", "value": 89, "description": "..." },
+      { "label": "Adaptability", "value": 87, "description": "..." }
+    ]
+  }
   },
 
   "about": {

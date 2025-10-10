@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  // { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: '', loadChildren: () => import('./sub-home/sub-home-routing.module').then(m => m.SubHomeRoutingModule) },
   { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
   { path: 'experience', loadChildren: () => import('./experience/experience.module').then(m => m.ExperienceModule) },
   { path: 'skills', loadChildren: () => import('./skills/skills.module').then(m => m.SkillsModule) },

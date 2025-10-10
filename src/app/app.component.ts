@@ -1,5 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +11,31 @@ import { Title, Meta } from '@angular/platform-browser';
 export class AppComponent implements OnInit {
   currentYear = new Date().getFullYear();
   showScrollTop = false;
+  footerClass = ''; // 👈 class for footer
+  activeRoute = '';
 
-  constructor(private title: Title, private meta: Meta) {}
+
+  constructor(private title: Title, private meta: Meta , private router: Router) {}
 
   ngOnInit() {
+
+    // detect route for footer style
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        const url = event.urlAfterRedirects || event.url;
+        if (url === '/home' || url === '/' || url === '/subhome') {
+        }
+      });
+
+      this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.activeRoute = event.urlAfterRedirects;
+      }
+    });
+
+  
+
     this.title.setTitle('Ehab El-Sayed');
     this.meta.updateTag({
       name: 'description',
@@ -36,4 +59,6 @@ export class AppComponent implements OnInit {
       behavior: 'smooth',
     });
   }
+
+  onRouteActivate(event: any) {}
 }

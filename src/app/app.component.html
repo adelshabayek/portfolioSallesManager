@@ -1,5 +1,5 @@
-<router-outlet></router-outlet>
-<app-nav-bar class="header"></app-nav-bar>
+<router-outlet (activate)="onRouteActivate($event)"></router-outlet>
+<app-nav-bar class="header" [activeRoute]="activeRoute"></app-nav-bar>
 <!-- Scroll-to-top Button -->
 <button
   class="scroll-top-btn"
@@ -9,4 +9,4 @@
   <i class="pi pi-arrow-up"></i>
 </button>
 
-<app-footer></app-footer>
+<app-footer [activeRoute]="activeRoute"></app-footer>

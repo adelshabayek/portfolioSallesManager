@@ -33,6 +33,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
+import { SubHomeModule } from './sub-home/sub-home.module';
 
 
 @NgModule({
@@ -65,10 +66,12 @@ import { FooterComponent } from './layout/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    SubHomeModule
     
   ],
     bootstrap: [AppComponent],
+  
 
   providers: [provideAnimationsAsync()],
 })

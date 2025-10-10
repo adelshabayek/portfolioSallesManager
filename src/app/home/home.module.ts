@@ -13,7 +13,7 @@ import { ExperienceModule } from "../experience/experience.module";
 import { ContactModule } from "../contact/contact.module";
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent ],
   imports: [HomeRoutingModule,
     CardModule,
     ChartModule,

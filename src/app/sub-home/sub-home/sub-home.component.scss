@@ -1,0 +1,206 @@
+$primary-glow: #00f5ff;
+$secondary-glow: #5d00ff;
+$text-light: #d0e0ff;
+
+.subhome {
+  position: relative;
+  min-height: 130vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+
+  // 🎥 Background video
+  .bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.8) contrast(1.7) saturate(1.8);
+  }
+
+  // 🌈 Animated overlay
+  // .animated-overlay {
+  //   position: absolute;
+  //   inset: 0;
+  //   background: linear-gradient(
+  //     120deg,
+  //     rgba(0, 255, 255, 0.1),
+  //     rgba(0, 0, 254, 0.1),
+  //     rgba(0, 255, 200, 0.1)
+  //   );
+  //   background-size: 400% 400%;
+  //   animation: moveGradient 12s ease-in-out infinite;
+  //   mix-blend-mode: screen;
+  //   z-index: 1;
+  // }
+
+  // @keyframes moveGradient {
+  //   0% {
+  //     background-position: 0% 50%;
+  //   }
+  //   50% {
+  //     background-position: 100% 50%;
+  //   }
+  //   100% {
+  //     background-position: 0% 50%;
+  //   }
+  // }
+
+  // 💎 Content
+  .ai-content {
+    position: relative;
+    z-index: 2;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      background: linear-gradient(90deg, $primary-glow, $secondary-glow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h4 {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: 500;
+    }
+
+    p {
+     
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: $text-light;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+
+    .btn {
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      padding: 0.7rem 1.3rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+      }
+    }
+  }
+
+  // 🖼 Profile Picture
+ // 🧠 AI-Style Profile Picture
+.profile-pic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: clamp(130px, 20vw, 200px);
+    height: clamp(130px, 20vw, 200px);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+
+    &:hover {
+   
+      box-shadow: 0 0 35px rgba(0, 255, 255, 0.7);
+    }
+  }
+
+  // 💫 Animated AI glow ring
+  &::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #00f5ff,
+      #5d00ff,
+      #00f5ff
+    );
+    filter: blur(20px);
+    animation: aiGlow 6s linear infinite;
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+
+}
+
+
+
+
+
+  // 📱 Responsive layout
+  @media (max-width: 992px) {
+    .ai-content {
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ai-content {
+      padding: 1.2rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 1rem;
+
+    .ai-content {
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+
+    .btn-lg {
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+}
+
+
+/* Animations */
+.animate-fade {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+.animate-fade-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+.animate-fade-delay2 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+.animate-fade-delay3 {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: none; }
+  from { opacity: 0; transform: translateY(20px); }
+}
+

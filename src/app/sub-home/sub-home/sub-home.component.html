@@ -1,0 +1,38 @@
+<section class="subhome">
+  <!-- 🎥 AI Digital Video Background -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/images/ai2.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- 🌈 Animated Overlay -->
+  <div class="animated-overlay"></div>
+
+  <!-- 💎 Content -->
+  <div class="ai-content container">
+    <!-- Profile Picture -->
+    <div class="profile-pic ">
+      <img src="/assets/Ehab.png" alt="Ehab ElSayed"
+        class="img-fluid rounded-circle shadow-lg" />
+    </div>
+
+    <h1 class="display-4 fw-bold animate-fade">{{ profile.name }}</h1>
+    <h3 class="mb-3 animate-fade-delay">{{ profile.title }}</h3>
+    <p class="lead animate-fade-delay2">{{ profile.tagline }}</p>
+
+    <div class="mt-3 d-flex flex-wrap justify-content-center gap-3 mb-5 animate-fade-delay3">
+      <a class="btn btn-primary btn-lg shadow" href="/assets/cv-ehab.pdf"
+        download>
+        <i class="pi pi-download"></i> Download CV
+      </a>
+      <a class="btn btn-dark btn-lg shadow" routerLink="/contact">
+        <i class="pi pi-envelope"></i> Contact Me
+      </a>
+      <a class="btn btn-outline-light btn-lg shadow" [href]="profile.contacts.linkedin"
+        target="_blank">
+        <i class="pi pi-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
