@@ -15,6 +15,9 @@ import { ApiService } from '../../core/services/api.service';
 export class SubHomeComponent implements AfterViewInit, OnDestroy {
   @ViewChild('aiCanvas', { static: true })
   canvasRef!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('bgVideo', { static: true })
+  videoRef!: ElementRef<HTMLVideoElement>;
+
   private ctx!: CanvasRenderingContext2D;
   private particles: any[] = [];
   private animationFrameId: any;
@@ -41,6 +44,14 @@ export class SubHomeComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
+    // 🧠 Force video to play after component initializes
+    const video = this.videoRef.nativeElement;
+    video.muted = true;
+    video.play().catch((err) => {
+      console.warn('Video autoplay blocked:', err);
+    });
+
+    // 🎨 Setup canvas animation
     const canvas = this.canvasRef.nativeElement;
     this.ctx = canvas.getContext('2d')!;
     this.resizeCanvas();
