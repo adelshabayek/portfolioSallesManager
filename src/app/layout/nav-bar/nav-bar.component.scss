@@ -8,7 +8,10 @@
   top: 20px;
   z-index: 1000;
   transition: all 0.3s ease;
-
+   &.home-active {
+    background: rgba(0, 0, 0, 0.6);
+    transition: none;
+   }
   .navbar-container {
     display: flex;
     align-items: center;
