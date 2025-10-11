@@ -104,9 +104,11 @@ padding-top: 130px !important;
     h1 {
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 700;
-      background: linear-gradient(90deg, $primary-glow, $secondary-glow);
+      background: #fff;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 6px #fff);
+      
     }
 
     h4 {
